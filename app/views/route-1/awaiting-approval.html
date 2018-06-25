@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "/url/of/previous/page",
+    text: "Back"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-xl">
+        Establishment waiting for approval
+      </h1>
+
+      <p></p>
+
+      <p>This paragraph has a link to <a href="/url/of/onward/page">find out more about this subject</a>.</p>
+
+    </div>
+  </div>
+{% endblock %}
