@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Create an account
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "sign-in",
+    text: "Back"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-xl">
+        Create an account
+      </h1>
+
+      <h2 class="govuk-heading-l">
+        What is NMDS?
+      </h2>
+
+      <p>Proin aliquet lobortis faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus lacinia dolor, vel ultricies dolor pretium a. Vestibulum non metus tristique, efficitur lectus a, elementum quam. Etiam faucibus lorem non orci bibendum, sit amet varius tortor imperdiet.</p>
+
+      <h2 class="govuk-heading-l">
+        Who should use it?
+      </h2>
+
+      <p>Proin aliquet lobortis faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus lacinia dolor, vel ultricies dolor pretium a. Vestibulum non metus tristique, efficitur lectus a, elementum quam. Etiam faucibus lorem non orci bibendum, sit amet varius tortor imperdiet.</p>
+
+      <form class="form" action="create-username" method="post">
+
+        <button type="submit" class="govuk-button">
+          Create an account
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
