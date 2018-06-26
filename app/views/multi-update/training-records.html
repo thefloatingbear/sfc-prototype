@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "/url/of/previous/page",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        What training would you like to update?
+      </h1>
+
+      <p>There are workers with the following training which you can update. Choose one, or add more training.</p>
+
+      <form class="form" action="select-level" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+                Early learning and childcare
+              </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                Fire safety
+              </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                First aid
+              </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                Leadership and management
+              </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                Add new taining
+              </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <input class="govuk-button" type="submit" value="Continue">
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

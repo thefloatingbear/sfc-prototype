@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "/url/of/previous/page",
+    text: "Back"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-xl">
+        What would you like to update?
+      </h1>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="training-records">
+            Update training records
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Update qualifications
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Update pay records
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Select worker records to update
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+{% endblock %}

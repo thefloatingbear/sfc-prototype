@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Enter your details
+  Question page
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,38 +17,45 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Care Quality Commission regulation
+        What is the new level of training?
       </h1>
 
-      <form class="form" action="your-establishment" method="post">
+      <p>You can update this training to the following levels:</p>
+
+      <form class="form" action="select-workers" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
-            <legend>
-              <p>
-                Is it CQC regulated?
-              </p>
-            </legend>
             <div class="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
                 <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
-                  Yes
-                </label>
+                Level 3
+              </label>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
                 <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-                No
+                Level 4
+              </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                Level 5
+              </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                Level 6
               </label>
               </div>
             </div>
           </fieldset>
         </div>
 
-        <button type="submit" class="govuk-button" value="continue">
-          Save and continue
-        </button>
+        <input class="govuk-button" type="submit" value="Continue">
 
       </form>
 
