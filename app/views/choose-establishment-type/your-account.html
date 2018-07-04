@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Your account
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "add-details",
+    text: "Back"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">
+        Your account
+      </h1>
+
+        <p>Welcome to your account page.</p>
+
+        <p><a href="/">Edit your account details</a></p>
+
+      <h2 class="govuk-heading-l">
+        Your organisation
+      </h2>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Name</th>
+            <th class="govuk-table__header" scope="col">Type</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row"><a href="#">Super care homes</a></td>
+            <td class="govuk-table__cell" scope="row">Care home with nursing</td>
+            <td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123">Edit</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="govuk-heading-m">
+        Add another
+      </h3>
+
+        <p><a href="create-head-office">Add a head office</a></p>
+        <p><a href="create-establishment">Add a care home with nursing</a></p>
+        <p><a href="create-establishment">Add a care home without nursing</a></p>
+        <p><a href="create-establishment">Add an adult placement home</a></p>
+        <p><a href="create-establishment">Add sheltered housing</a></p>
+        <p><a href="create-establishment">Add an extra care housing service</a></p>
+
+
+    </div>
+  </div>
+{% endblock %}
