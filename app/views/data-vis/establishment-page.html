@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "/url/of/previous/page",
+    text: "Back"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-xl">
+        Super Care Homes
+      </h1>
+
+      <h2 class="govuk-heading-m">
+        Worker records needing attention
+      </h2>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Name</th>
+            <th class="govuk-table__header" scope="col">Job role</th>
+            <th class="govuk-table__header" scope="col">Attention needed</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Maximo Tyler</td>
+            <td class="govuk-table__cell" scope="row">Care Worker</td>
+            <td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123"><strong class="govuk-tag">Update</strong></a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Sonny Compton</td>
+            <td class="govuk-table__cell" scope="row">Care Worker</td>
+            <td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123"><strong class="govuk-tag">Update</strong></a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Alisson Wise</td>
+            <td class="govuk-table__cell" scope="row">Occupational Therapist</td>
+            <td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123"><strong class="govuk-tag">Update</strong></a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Adrianna Payne</td>
+            <td class="govuk-table__cell" scope="row">Senior Care Worker</td>
+            <td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123"><strong class="govuk-tag">Update</strong></a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Kadyn Friedman</td>
+            <td class="govuk-table__cell" scope="row">Care Worker</td>
+            <td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123"><strong class="govuk-tag">Update</strong></a></td>
+          </tr>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><a href="#">View more workers</a></p>
+
+      <h2 class="govuk-heading-l">
+        Establishment data
+      </h2>
+
+      <p>
+        <img src="https://qph.ec.quoracdn.net/main-qimg-9410728adc0bce6332db8f8a59fd082c.webp" style="border-style: outset; width: 100%;">
+      </p>
+
+      <p><a href="#">View more data</a></p>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <br>
+      <p><a href="#">Edit establishment details</a></p>
+    </div>
+  </div>
+{% endblock %}
