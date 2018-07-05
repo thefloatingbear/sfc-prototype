@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Your account
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "add-details",
+    text: "Back"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-xl">
+        {{ data['your-name'] }}'s account
+      </h1>
+
+      <p>Welcome to your account page.</p>
+
+      <p><a href="/">Edit your account details</a></p>
+
+      <h2 class="govuk-heading-l">
+        Your establishments
+      </h2>
+
+      <p>You don't have any establishments at the moment.</p>
+
+      <p><a href="create-establishment">Add an establishment</a></p>
+
+
+
+    </div>
+  </div>
+{% endblock %}

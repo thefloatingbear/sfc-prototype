@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "/url/of/previous/page",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        What is the new level of training?
+      </h1>
+
+      <p>You can update this training to the following levels:</p>
+
+      <form class="form" action="select-workers" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+                Level 3
+              </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                Level 4
+              </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                Level 5
+              </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                Level 6
+              </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <input class="govuk-button" type="submit" value="Continue">
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

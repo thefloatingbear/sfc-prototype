@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-6">
+      <h2 class="govuk-panel__title">
+        Training updated
+      </h2>
+      <div class="govuk-panel__body">
+        You have successfully updated your training records.
+      </div>
+    </div>
+
+    <form class="form" action="multi-update" method="post">
+
+      <input class="govuk-button" type="submit" value="Return to worker records">
+
+    </form>
+
+  </div>
+</div>
+{% endblock %}

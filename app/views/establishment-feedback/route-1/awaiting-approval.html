@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Awaiting approval
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "main-service",
+    text: "Back"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-6">
+        <h2 class="govuk-panel__title">
+          Awaiting approval
+        </h2>
+        <div class="govuk-panel__body">
+          You've submitted your establishment to the Skills for Care team.
+        </div>
+      </div>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p>
+        We will send you a confirmation email when we have approved your establishment.
+      </p>
+      <p>
+        This should be within 1 working day.
+      </p>
+
+    </div>
+  </div>
+{% endblock %}

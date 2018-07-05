@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "/url/of/previous/page",
+    text: "Back"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Worker records
+      </h1>
+
+      			<table class="govuk-table">
+      				<thead class="govuk-table__head">
+      					<tr class="govuk-table__row">
+      						<th class="govuk-table__header" scope="col">Name / ID</th>
+      						<th class="govuk-table__header" scope="col">Job role</th>
+      						<th class="govuk-table__header" scope="col">Establishment</th>
+      						<th></th>
+      					</tr>
+      				</thead>
+      				<tbody class="govuk-table__body">
+      					<tr class="govuk-table__row">
+      						<td class="govuk-table__cell" scope="row">Maximo Tyler</td>
+      						<td class="govuk-table__cell" scope="row">Care Worker</td>
+      						<td class="govuk-table__cell" scope="row">Quorn Orchard</td>
+      						<td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123">View</a></td>
+      					</tr>
+      					<tr class="govuk-table__row">
+      						<td class="govuk-table__cell" scope="row">Sonny Compton</td>
+      						<td class="govuk-table__cell" scope="row">Care Worker</td>
+      						<td class="govuk-table__cell" scope="row">Rothley Meadows</td>
+      						<td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123">View</a></td>
+      					</tr>
+      					<tr class="govuk-table__row">
+      						<td class="govuk-table__cell" scope="row">Alisson Wise</td>
+      						<td class="govuk-table__cell" scope="row">Occupational Therapist</td>
+      						<td class="govuk-table__cell" scope="row">Quorn Orchard</td>
+      						<td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123">View</a></td>
+      					</tr>
+      					<tr class="govuk-table__row">
+      						<td class="govuk-table__cell" scope="row">Adrianna Payne</td>
+      						<td class="govuk-table__cell" scope="row">Senior Care Worker</td>
+      						<td class="govuk-table__cell" scope="row">Quorn Orchard</td>
+      						<td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123">View</a></td>
+      					</tr>
+      					<tr class="govuk-table__row">
+      						<td class="govuk-table__cell" scope="row">Kadyn Friedman</td>
+      						<td class="govuk-table__cell" scope="row">Care Worker</td>
+      						<td class="govuk-table__cell" scope="row">Rothley Meadows</td>
+      						<td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123">View</a></td>
+      					</tr>
+      					<tr class="govuk-table__row">
+      						<td class="govuk-table__cell" scope="row">Travis Stephenson</td>
+      						<td class="govuk-table__cell" scope="row">Care Worker</td>
+      						<td class="govuk-table__cell" scope="row">Rothley Meadows</td>
+      						<td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123">View</a></td>
+      					</tr>
+      					<tr class="govuk-table__row">
+      						<td class="govuk-table__cell" scope="row">Raquel Huff</td>
+      						<td class="govuk-table__cell" scope="row">Senior Care Worker</td>
+      						<td class="govuk-table__cell" scope="row">Quorn Orchard</td>
+      						<td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123">View</a></td>
+      					</tr>
+      					<tr class="govuk-table__row">
+      						<td class="govuk-table__cell" scope="row">Mareli Thornton</td>
+      						<td class="govuk-table__cell" scope="row">Senior Care Worker</td>
+      						<td class="govuk-table__cell" scope="row">Quorn Orchard</td>
+      						<td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123">View</a></td>
+      					</tr>
+      					<tr class="govuk-table__row">
+      						<td class="govuk-table__cell" scope="row">Makaila Stephens</td>
+      						<td class="govuk-table__cell" scope="row">Registered Manager</td>
+      						<td class="govuk-table__cell" scope="row">Quorn Orchard</td>
+      						<td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123">View</a></td>
+      					</tr>
+      					<tr class="govuk-table__row">
+      						<td class="govuk-table__cell" scope="row">Lance Pace</td>
+      						<td class="govuk-table__cell" scope="row">Occupational Therapist</td>
+      						<td class="govuk-table__cell" scope="row">Quorn Orchard</td>
+      						<td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123">View</a></td>
+      					</tr>
+      					<tr class="govuk-table__row">
+      						<td class="govuk-table__cell" scope="row">Darrell Lane</td>
+      						<td class="govuk-table__cell" scope="row">Senior Care Worker</td>
+      						<td class="govuk-table__cell" scope="row">Quorn Orchard</td>
+      						<td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123">View</a></td>
+      					</tr>
+      				</tbody>
+      			</table>
+      			<p><a href="#">Show more workers</a></p>
+
+    </div>
+    <br>
+    <div class="govuk-grid-column-one-third">
+      <p><a href="choose-update">Update multiple records</a></p>
+    </div>
+
+  </div>
+{% endblock %}
