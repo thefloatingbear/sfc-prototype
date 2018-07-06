@@ -4,9 +4,35 @@
   Your account
 {% endblock %}
 
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+{{ govukHeader({
+    "homepageUrl": "/",
+    "serviceName": "Data visualisation",
+    "serviceUrl": "/",
+    "containerClasses": "govuk-width-container",
+    "navigation": [
+        {
+        "href": "your-account",
+        "text": "Your account",
+        "active": true
+        },
+        {
+        "href": "establishment-page",
+        "text": "Your establishment"
+        },
+        {
+        "href": "dashboard",
+        "text": "Your dashboards"
+        }
+    ]
+}) }}
+{% endblock %}
+
 {% block beforeContent %}
   {{ govukBackLink({
-    href: "add-details",
+    href: "../index",
     text: "Back"
   }) }}
 {% endblock %}
@@ -24,7 +50,7 @@
         <p><a href="/">Edit your account details</a></p>
 
       <h2 class="govuk-heading-l">
-        Your organisations
+        Your organisation
       </h2>
 
       <table class="govuk-table">
@@ -37,7 +63,7 @@
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell" scope="row"><a href="establishment-page">Super care homes</a></td>
+            <td class="govuk-table__cell" scope="row"><a href="establishment-page">Super Care Homes</a></td>
             <td class="govuk-table__cell" scope="row">Care home with nursing</td>
             <td class="govuk-table__cell" scope="row"><a href="/records/workers/worker-123">Edit</a></td>
           </tr>
@@ -53,7 +79,7 @@
       </h2>
 
       <p><a href="#">View and export basic dashboards</a></p>
-      <p><a href="#">View data about your organisations</a></p>
+      <p><a href="#">View data about your organisation</a></p>
       <p><a href="#">Fancy data tools</a></p>
 
     </div>

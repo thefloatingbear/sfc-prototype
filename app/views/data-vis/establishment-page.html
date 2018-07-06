@@ -1,12 +1,38 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Content page
+  Your establishment
+{% endblock %}
+
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+{{ govukHeader({
+    "homepageUrl": "/",
+    "serviceName": "Data visualisation",
+    "serviceUrl": "/",
+    "containerClasses": "govuk-width-container",
+    "navigation": [
+        {
+        "href": "your-account",
+        "text": "Your account"
+        },
+        {
+        "href": "establishment-page",
+        "text": "Your establishment",
+        "active": true
+        },
+        {
+        "href": "dashboard",
+        "text": "Your dashboards"
+        }
+    ]
+}) }}
 {% endblock %}
 
 {% block beforeContent %}
   {{ govukBackLink({
-    href: "/url/of/previous/page",
+    href: "your-account",
     text: "Back"
   }) }}
 {% endblock %}
