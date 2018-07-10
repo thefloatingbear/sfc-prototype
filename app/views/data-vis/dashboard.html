@@ -23,7 +23,7 @@
         },
         {
         "href": "dashboard",
-        "text": "Your dashboards",
+        "text": "Your data",
         "active": true
         }
     ]
@@ -64,6 +64,19 @@
         <img src="https://farm1.staticflickr.com/840/43252639892_b1ff6db39d_b.jpg" style="width:100%; padding: 10px">
         <figcaption>Average pay rate for care workers</figcaption>
       </figure>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Change view
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published">Average pay</option>
+          <option value="updated" selected>Sick leave</option>
+          <option value="views">Care certificate</option>
+          <option value="comments">Main job role</option>
+          <option value="comments">Average weekly hours</option>
+        </select>
+      </div>
 
     </div>
 
