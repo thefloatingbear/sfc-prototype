@@ -38,16 +38,58 @@
 {% endblock %}
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
+    <div class="govuk-grid-column-full">
 
       <h1 class="govuk-heading-xl">
-        Your dashboards
+        Your data
       </h1>
 
       <h2 class="govuk-heading-l">
         Super Care Homes
       </h2>
+
+      <div class="govuk-tabs govuk-!-margin-bottom-6" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="dashboard">
+              Your dashboards
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#">
+              Employers and staff
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#">
+              Recruitment and retention
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#">
+              Workforce demographics
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#">
+              Pay
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#">
+              Qualifications and training
+            </a>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#">
+                Local demand and intelligence
+              </a>
+          </li>
+        </ul>
+      </div>
 
       <p><a href="#">Edit dashboard</a> | <a href="#">Create new dashboard</a> | <a href="#">Export dashboard</a></p>
 
@@ -64,19 +106,6 @@
         <img src="https://farm1.staticflickr.com/840/43252639892_b1ff6db39d_b.jpg" style="width:100%; padding: 10px">
         <figcaption>Average pay rate for care workers</figcaption>
       </figure>
-
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="sort">
-          Change view
-        </label>
-        <select class="govuk-select" id="sort" name="sort">
-          <option value="published">Average pay</option>
-          <option value="updated" selected>Sick leave</option>
-          <option value="views">Care certificate</option>
-          <option value="comments">Main job role</option>
-          <option value="comments">Average weekly hours</option>
-        </select>
-      </div>
 
     </div>
 
