@@ -42,102 +42,66 @@
 {% endblock %}
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full" style="border-bottom: solid 1px lightgrey;">
+    <div class="govuk-grid-column-full">
 
       <h1 class="govuk-heading-xl">
         Your data
       </h1>
 
-      <p>
-
-    </div>
-
-    <div class="govuk-grid-column-full">
-
-    <div class="govuk-grid-column-one-quarter" style="border-right: solid 1px lightgrey; padding: 25px 0px 0px 0px">
-
-      <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Your dashboard
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-            <p><a href="#">Edit dashboard</a></p>
-            <p><a href="#">Create new dashboard</a></p>
-            <p><a href="#">Export dashboard</a></p>
-        </div>
-      </details>
-      <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Employers and staff
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-            <a href="#">View data</a>
-        </div>
-      </details>
-      <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Recruitment and retention
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-            <a href="#">View data</a>
-        </div>
-      </details>
-      <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Workforce demographics
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-            <a href="#">View data</a>
-        </div>
-      </details>
-      <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Pay
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-            <a href="#">View data</a>
-        </div>
-      </details>
-      <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Qualifications and training
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-            <a href="#">View data</a>
-        </div>
-      </details>
-      <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Local demand and intelligence
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-            <a href="#">View data</a>
-        </div>
-      </details>
-
-    </div>
-
-    <div class="govuk-grid-column-one-third">
-
-      <h2 class="govuk-heading-l" style="padding: 10px; position: absolute;">
-        Your saved dashboard
+      <h2 class="govuk-heading-l">
+        Super Care Homes
       </h2>
 
-      <figure style="padding: 85px 0px 0px 0px;">
+      <div class="govuk-tabs govuk-!-margin-bottom-6" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="dashboard">
+              Your dashboards
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#">
+              Employers and staff
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#">
+              Recruitment and retention
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#">
+              Workforce demographics
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#">
+              Pay
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#">
+              Qualifications and training
+            </a>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#">
+                Local demand and intelligence
+              </a>
+          </li>
+        </ul>
+      </div>
+
+      <p><a href="#">Edit dashboard</a> | <a href="#">Create new dashboard</a> | <a href="#">Export dashboard</a></p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+
+      <figure>
         <img src="https://farm1.staticflickr.com/923/42396963955_5c1ee853f3_b.jpg" style="width:100%; padding: 10px">
         <figcaption>Average hourly pay compared with other care homes in your area</figcaption>
       </figure>
@@ -149,9 +113,9 @@
 
     </div>
 
-    <div class="govuk-grid-column-one-third">
+    <div class="govuk-grid-column-one-half">
 
-      <figure style="padding: 85px 0px 0px 0px;">
+      <figure>
         <img src="https://farm2.staticflickr.com/1830/29433494588_3ae416b997_b.jpg" style="width:100%; padding: 10px">
         <figcaption>Average number of days sickness compared with other local authorities</figcaption>
       </figure>
@@ -162,6 +126,5 @@
       </figure>
 
     </div>
-  </div>
   </div>
 {% endblock %}
