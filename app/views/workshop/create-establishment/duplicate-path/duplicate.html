@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "/url/of/previous/page",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Does this establishment already exist?
+      </h1>
+
+      <p>Some of the details you've given about your establishment are already in our system. This may mean the establishment has already been created.</p>
+
+      <h2 class="govuk-heading-l">
+        What can you do now?
+      </h2>
+
+      <p>You can continue to create the establishment, however if it is duplicating existing information we may have to remove it.<p>
+
+      <p>You may want to check to see whether anyone has already created this establishment. This could be a senior manager or someone from your HR department.</p>
+
+      <p>If you are unsure or the person who created it has left, contact the team at Skills for Care on 01234 567890.</p>
+
+      <form class="form" action="establishment-details" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Would you like to continue creating this account?
+              </h2>
+            </legend>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                Yes
+              </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                No
+              </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <input class="govuk-button" type="submit" value="Continue">
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

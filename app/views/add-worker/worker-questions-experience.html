@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">
+        Experience
+      </h1>
+
+            <form action="sick-leave" method="post" class="form">
+      <div class="form-group">
+        <label class="form-label-bold" for="year-started">What year did they start working in social care?</label>
+        <input class="form-control" id="year-started" type="text" name="year-started" value="{{ data['year-started'] }}">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label-bold" for="date-started">What date did they start in their current role?</label>
+        <input class="form-control" id="date-started" type="text" name="date-started" value="{{ data['date-started'] }}">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label-bold" for="recruited">Where were they recruited from?</label>
+        <input class="form-control" id="recruited" type="text" name="recruited" value="{{ data['recruited'] }}">
+      </div>
+
+      <button class="button" type="submit" value="continue">Save and continue</button>
+
+    </form>
+
+      <br>
+
+      <p><a href="#">Save record</a></p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

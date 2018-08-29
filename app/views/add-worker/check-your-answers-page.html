@@ -1,0 +1,447 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a href="#" class="link-back">Back</a>
+
+      <h1 class="heading-large">
+        Check the information and save the record
+      </h1>
+
+
+      <!-- only add a heading for a list if there is more than one list -->
+      <h2 class="heading-medium">
+        Personal details
+      </h2>
+
+      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+      <!--   * `cya-questions-short` for short questions -->
+      <!--   * `cya-questions-long` for long questions -->
+      <!--   * none for single group of q&a -->
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Main job role
+          </dt>
+          <dd class="cya-answer">
+            {{data['job-group']}}
+          </dd>
+          <dd class="cya-change">
+            <a href="add-new-worker">
+              Change<span class="visually-hidden"> main job role</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Other job roles
+          </dt>
+          <dd class="cya-answer">
+            {{data['other-job']}}
+          </dd>
+          <dd class="cya-change">
+            <a href="other-roles">
+              Change<span class="visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            National insurance number
+          </dt>
+          <dd class="cya-answer">
+            {{ data['nino'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="personal-information">
+              Change<span class="visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Date of birth
+          </dt>
+          <dd class="cya-answer">
+            {{data['dob-day']}}/{{data['dob-month']}}/{{data['dob-year']}}
+          </dd>
+          <dd class="cya-change">
+            <a href="personal-information">
+              Change<span class="visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Home Postcode
+          </dt>
+          <dd class="cya-answer">
+            {{data['postcode']}}
+          </dd>
+          <dd class="cya-change">
+            <a href="personal-information">
+              Change<span class="visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Gender
+          </dt>
+          <dd class="cya-answer">
+            {{data['gender']}}
+          </dd>
+          <dd class="cya-change">
+            <a href="worker-questions-gender">
+              Change<span class="visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+
+      <div>
+        <dt class="cya-question">
+          Disability
+        </dt>
+        <dd class="cya-answer">
+          {{data['disability']}}
+        </dd>
+        <dd class="cya-change">
+          <a href="worker-questions-gender">
+            Change<span class="visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          Ethnicity
+        </dt>
+        <dd class="cya-answer">
+          {{data['ethnicity']}}
+        </dd>
+        <dd class="cya-change">
+          <a href="worker-questions-gender">
+            Change<span class="visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          British
+        </dt>
+        <dd class="cya-answer">
+          {{data['nationality']}}
+        </dd>
+        <dd class="cya-change">
+          <a href="worker-questions-citizenship">
+            Change<span class="visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          British citizenship
+        </dt>
+        <dd class="cya-answer">
+          {{data['citizen']}}
+        </dd>
+        <dd class="cya-change">
+          <a href="worker-questions-citizenship">
+            Change<span class="visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          Nationality
+        </dt>
+        <dd class="cya-answer">
+          {{data['other-nationality']}}
+        </dd>
+        <dd class="cya-change">
+          <a href="worker-questions-citizenship">
+            Change<span class="visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          Born in the UK
+        </dt>
+        <dd class="cya-answer">
+          {{data['pob']}} {{ data['country'] }}
+        </dd>
+        <dd class="cya-change">
+          <a href="place-of-birth">
+            Change<span class="visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          Year arrived in the UK
+        </dt>
+        <dd class="cya-answer">
+          {{ data['arrival'] }}
+        </dd>
+        <dd class="cya-change">
+          <a href="place-of-birth">
+            Change<span class="visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+    </dl>
+
+      <h2 class="heading-medium">
+        Employment information
+      </h2>
+
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Year started in social care
+          </dt>
+          <dd class="cya-answer">
+            {{data['year-started']}}
+          </dd>
+          <dd class="cya-change">
+            <a href="worker-questions-experience">
+              Change<span class="visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Date started current role
+          </dt>
+          <dd class="cya-answer">
+            {{ data['date-started'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="worker-questions-experience">
+              Change<span class="visually-hidden"> licence type</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Recruited from
+          </dt>
+          <dd class="cya-answer">
+            {{ data['recruited'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="worker-questions-experience">
+              Change<span class="visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Sick leave
+          </dt>
+          <dd class="cya-answer">
+            {{ data['sickleave'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="sick-leave">
+              Change<span class="visually-hidden"> licence period</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Employment status
+          </dt>
+          <dd class="cya-answer">
+            {{ data['sickleave'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Guaranteed hours
+          </dt>
+          <dd class="cya-answer">
+            {{ data['zerohours'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Type of contract
+          </dt>
+          <dd class="cya-answer">
+            {{ data['contracttype'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Weekly hours
+          </dt>
+          <dd class="cya-answer">
+            {{ data['hours'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Additional hours
+          </dt>
+          <dd class="cya-answer">
+            {{ data['addhours'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Rate of pay
+          </dt>
+          <dd class="cya-answer">
+            {{ data['hourlyrate'] }}{{ data['salary'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <h2 class="heading-medium">
+        Training and qualifications
+      </h2>
+
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Care certificate
+          </dt>
+          <dd class="cya-answer">
+            {{ data['carecert'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Apprenticeship
+          </dt>
+          <dd class="cya-answer">
+            {{ data['apprenticeship'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Social care qualifications
+          </dt>
+          <dd class="cya-answer">
+            {{ data['scqual'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Other qualifications
+          </dt>
+          <dd class="cya-answer">
+            {{ data['otherquals'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Training
+          </dt>
+          <dd class="cya-answer">
+            {{ data['training'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <br>
+
+      <div class="form-group">
+        <p><a href="confirmation-page" class="button">Save record</a></p>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

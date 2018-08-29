@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">
+        Place of birth
+      </h1>
+
+      <form action="worker-questions-experience" method="post" class="form">
+      <div class="form-group">
+  <fieldset>
+
+    <legend>
+      <p class="form-label-bold">Were they born in the UK?</p>
+    </legend>
+
+    <div class="multiple-choice" data-target="pobyes">
+      <input id="example-contact-by-email" type="radio" name="pob" value="Yes" {{ checked('pob','Yes') }}>
+      <label for="example-contact-by-email">Yes</label>
+    </div>
+
+    <div class="multiple-choice" data-target="pobno">
+      <input id="example-contact-by-phone" type="radio" name="pob" value="No" {{ checked('pob','No') }}>
+      <label for="example-contact-by-phone">No</label>
+    </div>
+    <div class="panel panel-border-narrow js-hidden" id="pobno">
+
+      <div class="form-group">
+        <label class="form-label" for="country">What country were they born in?</label>
+        <input class="form-control" id="country" type="text" name="country" value="{{ data['country'] }}">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="arrival">What year did they arrive in the UK?</label>
+        <input class="form-control" id="arrival" type="text" name="arrival" value="{{ data['arrival'] }}">
+      </div>
+    </div>
+
+    <div class="multiple-choice" data-target="contact-by-text">
+      <input id="example-contact-by-text" type="radio" name="pob" value="Don&#39;t know" {{ checked('pob','Don&#39;t know') }}>
+      <label for="example-contact-by-text">Don't know</label>
+    </div>
+
+  </fieldset>
+
+  </div>
+
+  <button class="button" type="submit" value="continue">Save and continue</button>
+
+  </form>
+
+  <br>
+
+    <p><a href="#">Save record</a></p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

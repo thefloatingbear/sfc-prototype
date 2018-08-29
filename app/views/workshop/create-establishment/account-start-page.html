@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "/url/of/previous/page",
+    text: "Back"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-xl">
+        Add an establishment
+      </h1>
+
+      <p>This is a prototype for creating an account and adding an establishment.</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="route-1/sign-in">Route 1 - awaiting approval</a></li>
+        <li><a href="route-2/sign-in">Route 2 - create draft records</a></li>
+        <li><a href="duplicate-path/your-account">Duplicate establishment</a></li>
+        <li><a href="multi-update/multi-update">Update multiple records</a></li>
+      </ul>
+
+    </div>
+  </div>
+{% endblock %}

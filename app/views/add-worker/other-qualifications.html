@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">
+        Other qualifications
+      </h1>
+
+                  <form action="training" method="post" class="form">
+      <div class="form-group">
+        <fieldset>
+
+          <legend>
+            <p class="form-label-bold">Do they have any other qualifications?</p>
+          </legend>
+
+          <div class="multiple-choice" data-target="yesqual">
+            <input id="example-contact-by-email" type="radio" name="otherquals" value="Yes" {{ checked('otherquals','Yes') }}>
+            <label for="example-contact-by-email">Yes</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="yesqual">
+
+            <div class="form-group">
+              <label class="form-label" for="full-name-f1">What level is the qualification?</label>
+              <input class="form-control" id="levelqual" type="text" name="levelqual" value="{{ data['levelqual'] }}">
+            </div>
+          </div>
+
+          <div class="multiple-choice" data-target="contact-by-phone">
+            <input id="example-contact-by-phone" type="radio" name="otherquals" value="No" {{ checked('otherquals','No') }}>
+            <label for="example-contact-by-phone">No</label>
+          </div>
+
+          <div class="multiple-choice" data-target="contact-by-text">
+            <input id="example-contact-by-text" type="radio" name="otherquals" value="Don&#39;t know" {{ checked('otherquals','Don&#39;t know') }}>
+            <label for="example-contact-by-text">Don't know</label>
+          </div>
+
+        </fieldset>
+
+      </div>
+
+      <button class="button" type="submit" value="continue">Save and continue</button>
+
+    </form>
+
+      <br>
+
+      <p><a href="#">Save record</a></p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

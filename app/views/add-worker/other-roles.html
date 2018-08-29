@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="add-new-worker">Back</a>
+
+      <h1 class="heading-large">
+        Worker record for {{ data['record-name'] }}
+      </h1>
+
+      <h2 class="heading-medium">
+        Other roles
+      </h2>
+
+      <form action="personal-information" method="post" class="form">
+
+      <div class="form-group">
+        <fieldset>
+
+          <legend>
+            <p class="form-label-bold">Do they do any additional work?</p>
+          </legend>
+          <div class="multiple-choice">
+            <input id="radio-1" type="checkbox" name="other-job" value="Senior care worker" {{ checked('other-job','Senior care worker') }}>
+            <label for="radio-1">Senior care worker </label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="checkbox" name="other-job" value="Care worker" {{ checked('other-job','Care worker') }}>
+            <label for="radio-2">Care worker</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Community support and outreach worker" {{ checked('other-job','Community support and outreach worker') }}>
+            <label for="radio-3">Community support and outreach worker</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Advice guidance and advocacy" {{ checked('other-job','Advice guidance and advocacy') }}>
+            <label for="radio-3">Advice guidance and advocacy</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Other care providing job role" {{ checked('other-job','Other care providing job role') }}>
+            <label for="radio-3">Other care providing job role</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Senior management" {{ checked('other-job','Senior management') }}>
+            <label for="radio-3">Senior management</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Middle management" {{ checked('other-job','Middle management') }}>
+            <label for="radio-3">Middle management</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="First line manager" {{ checked('other-job','First line manager') }}>
+            <label for="radio-3">First line manager</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Registered manager" {{ checked('other-job','Registered manager') }}>
+            <label for="radio-3">Registered manager</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Supervisor" {{ checked('other-job','Supervisor') }}>
+            <label for="radio-3">Supervisor</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Managers and staff in care related but not care providing roles" {{ checked('other-job','Managers and staff in care related but not care providing roles') }}>
+            <label for="radio-3">Managers and staff in care related but not care providing roles</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Social worker" {{ checked('other-job','Social worker') }}>
+            <label for="radio-3">Social worker</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Occupational therapist" {{ checked('other-job','Occupational therapist') }}>
+            <label for="radio-3">Occupational therapist</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Registered nurse" {{ checked('other-job','Registered nurse') }}>
+            <label for="radio-3">Registered nurse</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Allied health professional" {{ checked('other-job','Allied health professional') }}>
+            <label for="radio-3">Allied health professional</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Safeguarding and reviewing officer" {{ checked('other-job','Safeguarding and reviewing officer') }}>
+            <label for="radio-3">Safeguarding and reviewing officer</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Administrative or office staff not providing care" {{ checked('other-job','Administrative or office staff not providing care') }}>
+            <label for="radio-3">Administrative or office staff not providing care</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Ancillary not care providingd" {{ checked('other-job','Ancillary not care providing') }}>
+            <label for="radio-3">Ancillary not care providing</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Activities worker or coordinator" {{ checked('other-job','Activities worker or coordinator') }}>
+            <label for="radio-3">Activities worker or coordinator</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Occupational therapist assistant" {{ checked('other-job','Occupational therapist assistant') }}>
+            <label for="radio-3">Occupational therapist assistant</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="checkbox" name="other-job" value="Other non care providing job roles" {{ checked('other-job','Other non care providing job roles') }}>
+            <label for="radio-3">Other non care providing job roles</label>
+          </div>
+
+        </fieldset>
+      </div>
+
+
+      <button class="button" type="submit" value="continue">Save and continue</button>
+    </form>
+
+    <br>
+
+      <p><a href="#">Save record</a></p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

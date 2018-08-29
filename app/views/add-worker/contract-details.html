@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">
+        Contract details
+      </h1>
+
+
+      <form action="worker-questions-certificate" method="post" class="form">
+      <div class="form-group">
+        <label class="form-label-bold" for="hours">What are their contracted weekly hours?</label>
+        <input class="form-control" id="hours" type="text" name="hours" value="{{ data['hours'] }}">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label-bold" for="addhours">How many additional hours did they work in the last 7 days?</label>
+        <input class="form-control" id="addhours" type="text" name="addhours" value="{{ data['addhours'] }}">
+      </div>
+
+      <div class="form-group">
+        <fieldset>
+
+          <legend>
+            <p class="form-label-bold">
+              How are they being paid?
+            </p>
+          </legend>
+
+          <div class="multiple-choice" data-target="rate">
+            <input id="example-contact-by-email" type="radio" name="payrate" value="Yes" {{ checked('payrate','Yes') }}>
+            <label for="example-contact-by-email">Hourly</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="rate">
+            <label class="form-label" for="hourlyrate">Hourly rate</label>
+            <input class="form-control" name="hourlyrate" type="text" id="hourlyrate" value="{{ data['hourlyrate'] }}">
+          </div>
+
+          <div class="multiple-choice" data-target="annual">
+            <input id="example-contact-by-phone" type="radio" name="payrate" value="No" {{ checked('payrate','No') }}>
+            <label for="example-contact-by-phone">Annually</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="annual">
+            <label class="form-label" for="salary">Annual salary</label>
+            <input class="form-control" name="salary" type="text" id="salary" value="{{ data['salary'] }}">
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="button" type="submit" value="continue">Save and continue</button>
+
+    </form>
+
+      <br>
+
+      <p><a href="#">Save record</a></p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

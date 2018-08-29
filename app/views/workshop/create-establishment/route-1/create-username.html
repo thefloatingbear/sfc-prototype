@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Create a username
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "create-account",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Create a username
+      </h1>
+
+      <form class="form" action="add-details" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="driving-licence-number">
+            Enter a username
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="driving-licence-number" name="driving-licence-number" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="driving-licence-number">
+            Enter a password
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="driving-licence-number" name="driving-licence-number" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="driving-licence-number">
+            Re-enter your password
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="driving-licence-number" name="driving-licence-number" type="text">
+        </div>
+
+        <button type="submit" class="govuk-button">
+          Save and continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

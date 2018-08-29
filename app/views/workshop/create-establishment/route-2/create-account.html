@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Create an account
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "sign-in",
+    text: "Back"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-xl">
+        Create an account
+      </h1>
+
+      <h2 class="govuk-heading-l">
+        What is NMDS-SC?
+      </h2>
+
+      <p>
+        The National Minimum Data Set for Social Care (NMDS-SC) is an online workforce data collection system for the social care sector. It’s the leading source of robust workforce intelligence for adult social care.
+      </p>
+
+      <p>
+        It provides information on the size and structure of the whole adult social care sector.
+      </p>
+
+      <h2 class="govuk-heading-l">
+        Who should use it?
+      </h2>
+
+      <p>
+        Users of NMDS-SC include:
+      </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>adult social care providers</li>
+        <li>government departments, strategic bodies and policy makers</li>
+        <li>local authorities</li>
+      </ul>
+      <p>
+        They use it for a variety of reasons, including tracking staff retention rates, workforce modelling, policy making and planning resources.
+      </p>
+      <p>
+        If you are unsure whether you need an account, contact the NMDS-SC team on 01234567890.
+      </p>
+
+      <form class="form" action="create-username" method="post">
+
+        <button type="submit" class="govuk-button">
+          Create an account
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

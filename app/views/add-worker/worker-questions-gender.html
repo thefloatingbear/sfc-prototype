@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">
+        Gender, disability, ethnicity
+      </h1>
+
+      <form action="worker-questions-citizenship" method="post" class="form">
+      <div class="form-group">
+        <fieldset>
+
+          <legend>
+            <p class="form-label-bold">What is their gender?</p>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="gender" value="man" {{ checked('gender','man') }}>
+            <label for="radio-1">Man</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="radio" name="gender" value="woman" {{ checked('gender','woman') }}>
+            <label for="radio-2">Woman</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="gender" value="other" {{ checked('gender','other') }}>
+            <label for="radio-3">Other</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="gender" value="Don&#39;t know" {{ checked('gender','Don&#39;t know') }}>
+            <label for="radio-3">Don't know</label>
+          </div>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+
+          <legend>
+            <p class="form-label-bold">Do they identify as having a disability?</p>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="disability" value="disabled" {{ checked('disability','disabled') }}>
+            <label for="radio-1">Disabled</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="radio" name="disability" value="not disabled" {{ checked('disability','not disabled') }}>
+            <label for="radio-2">Not disabled</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="disability" value="undisclosed" {{ checked('disability','undisclosed') }}>
+            <label for="radio-3">Undisclosed</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="disability" value="dontknow" {{ checked('disability','dontknow') }}>
+            <label for="radio-3">Don't know</label>
+          </div>
+
+        </fieldset>
+
+      </div>
+
+      <div class="form-group">
+        <label class="form-label-bold" for="ethnicity">What is their ethnicity?</label>
+        <input class="form-control" id="ethnicity" type="text" name="ethnicity" value="{{ data['ethnicity'] }}">
+      </div>
+
+      <button class="button" type="submit" value="continue">Save and continue</button>
+
+    </form>
+
+      <br>
+
+      <p><a href="#">Save record</a></p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="other-roles">Back</a>
+
+      <h1 class="heading-large">
+        Personal information
+      </h1>
+
+      <form action="worker-questions-gender" method="post" class="form">
+
+      <div class="form-group">
+        <label class="form-label-bold" for="nino">What is their national insurance number?</label>
+        <input class="form-control" id="nino" type="text" name="nino" value="{{ data['nino'] }}">
+      </div>
+
+      <div class="form-group">
+        <fieldset>
+          <legend>
+            <span class="form-label-bold">
+              What is their date of birth?
+            </span>
+          </legend>
+          <div class="form-date">
+            <div class="form-group form-group-day">
+              <label class="form-label" for="dob-day">Day</label>
+              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" value="{{ data['dob-day'] }}">
+            </div>
+            <div class="form-group form-group-month">
+              <label class="form-label" for="dob-month">Month</label>
+              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" value="{{ data['dob-month'] }}">
+            </div>
+            <div class="form-group form-group-year">
+              <label class="form-label" for="dob-year">Year</label>
+              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" value="{{ data['dob-year'] }}">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label-bold" for="postcode">What is their home postcode?</label>
+        <input class="form-control" id="postcode" type="text" name="postcode" value="{{ data['postcode'] }}">
+      </div>
+
+      <button class="button" type="submit" value="continue">Save and continue</button>
+
+    </form>
+
+      <br>
+
+      <p><a href="#">Save record</a></p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

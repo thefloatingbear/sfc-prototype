@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">
+        Apprenticeship
+      </h1>
+
+                  <form action="care-qualifications" method="post" class="form">
+      <div class="form-group">
+        <fieldset>
+
+          <legend>
+            <p class="form-label-bold">Are they doing training as part of an apprenticeship?</p>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="apprenticeship" value="Yes" {{ checked('apprenticeship','Yes') }}>
+            <label for="radio-1">Yes</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="radio" name="apprenticeship" value="No" {{ checked('apprenticeship','No') }}>
+            <label for="radio-2">No</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="apprenticeship" value="Don&#39;t know" {{ checked('apprenticeship','Don&#39;t know') }}>
+            <label for="radio-3">Don't know</label>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="button" type="submit" value="continue">Save and continue</button>
+
+    </form>
+
+      <br>
+
+      <p><a href="check-your-answers">Save record</a></p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

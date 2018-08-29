@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">
+        Training
+      </h1>
+
+      <form action="check-your-answers-page" method="post" class="form">
+
+      <div class="form-group">
+        <label class="form-label" for="training">Add training</label>
+        <input class="form-control" id="training" type="text" name="training" value="{{ data['training'] }}">
+      </div>
+
+      <button class="button" type="submit" value="continue">Save and continue</button>
+
+    </form>
+
+      <br>
+
+      <p><a href="check-your-answers-page" type="submit">Save record</a></p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

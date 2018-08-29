@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "/url/of/previous/page",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Which workers would you like to update?
+      </h1>
+
+      <p>You can choose from the follwing workers:</p>
+
+      <form class="form" action="confirm-workers" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="british">
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-1">
+                Maximo Tyler
+              </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish">
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+                Alisson Wise
+              </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other">
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                Kadyn Friedman
+              </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other">
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                Raquel Huff
+              </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other">
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                Mareli Thornton
+              </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <input class="govuk-button" type="submit" value="Continue">
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

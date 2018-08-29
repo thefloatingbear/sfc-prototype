@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">
+        Contract type
+      </h1>
+
+
+      <form action="contract-details" method="post" class="form">
+      <div class="form-group">
+        <fieldset>
+
+          <legend>
+            <p class="form-label-bold">What is their employment status?</p>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="empstatus" value="Permanent" {{ checked('empstatus','Permanent') }}>
+            <label for="radio-1">Permanent</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="radio" name="empstatus" value="Temporary" {{ checked('empstatus','Temporary') }}>
+            <label for="radio-2">Temporary</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="empstatus" value="Pool" {{ checked('empstatus','Pool') }}>
+            <label for="radio-3">Pool</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="empstatus" value="Agency" {{ checked('empstatus','Agency') }}>
+            <label for="radio-3">Agency</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="empstatus" value="Volunteer" {{ checked('empstatus','Volunteer') }}>
+            <label for="radio-3">Volunteer</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="empstatus" value="Other" {{ checked('empstatus','Other') }}>
+            <label for="radio-3">Other</label>
+          </div>
+
+        </fieldset>
+
+      </div>
+
+      <div class="form-group">
+        <fieldset>
+
+          <legend>
+            <p class="form-label-bold">Do they have a contract with guaranteed hours?</p>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="zerohours" value="Yes" {{ checked('zerohours','Yes') }}>
+            <label for="radio-1">Yes</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="radio" name="zerohours" value="No" {{ checked('zerohours','No') }}>
+            <label for="radio-2">No</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="zerohours" value="Don&#39;t know" {{ checked('zerohours','Don&#39;t know') }}>
+            <label for="radio-3">Don't know</label>
+          </div>
+
+        </fieldset>
+
+      </div>
+
+      <div class="form-group">
+
+        <fieldset>
+
+          <legend>
+            <p class="form-label-bold">What type of contract do they have?</p>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="contracttype" value="Full time" {{ checked('contracttype','Full time') }}>
+            <label for="radio-1">Full time</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="radio" name="contracttype" value="Part time" {{ checked('contracttype','Part time') }}>
+            <label for="radio-2">Part time</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="contracttype" value="Neither" {{ checked('contracttype','Neither') }}>
+            <label for="radio-3">Neither of these</label>
+          </div>
+
+        </fieldset>
+
+      </div>
+
+      <button class="button" type="submit" value="continue">Save and continue</button>
+
+    </form>
+
+      <br>
+
+      <p><a href="#">Save record</a></p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

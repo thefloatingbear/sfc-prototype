@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">
+        Sick leave
+      </h1>
+
+            <form action="contract-type" method="post" class="form">
+      <div class="form-group">
+        <label class="form-label-bold" for="sickleave">How many days sick leave have they taken in the last 12 months?</label>
+        <input class="form-control" id="sickleave" type="text" name="sickleave" value="{{ data['sickleave'] }}">
+      </div>
+
+      <p><button class="button" type="submit" value="continue">Save and continue</button></p>
+
+      <br>
+
+      <a href="check-your-answers-page" type="submit">Save record</a>
+
+    </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

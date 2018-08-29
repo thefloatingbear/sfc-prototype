@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">
+        Nationality
+      </h1>
+
+      <form action="place-of-birth" method="post" class="form">
+      <div class="form-group">
+        <fieldset>
+
+          <legend>
+            <p class="form-label-bold">
+              Are they British?
+            </p>
+          </legend>
+
+          <div class="multiple-choice" data-target="contact-by-email">
+            <input id="example-contact-by-email" type="radio" name="nationality" value="Yes" {{ checked('nationality','Yes') }}>
+            <label for="example-contact-by-email">Yes</label>
+          </div>
+
+          <div class="multiple-choice" data-target="contact-by-phone">
+            <input id="example-contact-by-phone" type="radio" name="nationality" value="No" {{ checked('nationality','No') }}>
+            <label for="example-contact-by-phone">No</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
+            <legend>
+                  <p>Do they hold British citizenship?</p>
+            </legend>
+
+                <div class="multiple-choice">
+                  <input id="radio-1" type="radio" name="citizen" value="Yes" {{ checked('citizen','Yes') }}>
+                  <label for="radio-1">Yes</label>
+                </div>
+                <div class="multiple-choice">
+                  <input id="radio-2" type="radio" name="citizen" value="No" {{ checked('citizen','No') }}>
+                  <label for="radio-2">No</label>
+                </div>
+          </div>
+
+          <div class="multiple-choice" data-target="contact-by-text">
+            <input id="example-contact-by-text" type="radio" name="nationality" value="Don&#39;t know" {{ checked('nationality','Don&#39;t know') }}>
+            <label for="example-contact-by-text">Don't know</label>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label-bold" for="other-nationality">What is their nationality?</label>
+        <input class="form-control" id="other-nationality" type="text" name="other-nationality" value="{{ data['other-nationality'] }}">
+      </div>
+
+      <button class="button" type="submit" value="continue">Save and continue</button>
+
+    </form>
+
+      <br>
+
+      <p><a href="#">Save record</a></p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

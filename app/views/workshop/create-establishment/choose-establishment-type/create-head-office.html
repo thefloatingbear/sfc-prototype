@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Create an account
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "sign-in",
+    text: "Back"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-xl">
+        Add a head office
+      </h1>
+
+      <div class="govuk-inset-text">
+        <p>
+          This should only be used for organisations who have a non-care providing head office.
+        </p>
+        <p>
+          If you wish to add a place which provides care you can do so from your account page.
+        </p>
+      </div>
+
+      <form class="form" action="head-office-details" method="post">
+
+        <button type="submit" class="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "add-details",
+    text: "Back"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-xl">
+        {{ data['establishment-name'] }}
+      </h1>
+
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          Your establishment has been sent for approval
+        </h2>
+        <div class="govuk-error-summary__body">
+          <p>We need to check a few things before we can approve it. We'll send you an email once we're done.</p>
+          <p>You can start to add worker records now but they will stay in draft until we've approved the establishment.</p>
+          <p>You may lose any information you enter now if we can't approve it.</p>
+        </div>
+      </div>
+
+      <p>Welcome to your establishment page.</p>
+
+      <p><a href="/">Edit establishment details</a></p>
+
+      <p><a href="/">Add new users</a></p>
+
+      <h2 class="govuk-heading-l">
+        Your worker records
+      </h2>
+
+      <p>You don't have any worker records at the moment.</p>
+
+      <p><a href="create-establishment">Add a worker record</a></p>
+
+
+    </div>
+  </div>
+{% endblock %}

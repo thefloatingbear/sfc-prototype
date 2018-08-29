@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="index">Back</a>
+
+      <h1 class="heading-large">
+        Add a new worker
+      </h1>
+
+      <form action="other-roles" method="post" class="form">
+      <div class="form-group">
+        <label class="form-label-bold" for="record-name">
+          How would you like to identify this record?
+          <span class="form-hint">
+            This is for your reference only
+          </span>
+        </label>
+        <input class="form-control" type="text" name="record-name" value="{{ data['record-name'] }}">
+
+
+      </div>
+
+      <div class="form-group">
+
+        <fieldset name="job-role">
+
+          <legend>
+            <p class="form-label-bold">What is their main job role?</p>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="job-group" value="Senior care worker" {{ checked('job-group','Senior care worker') }}>
+            <label for="radio-1">Senior care worker </label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="radio" name="job-group" value="Care worker" {{ checked('job-group','Care worker') }}>
+            <label for="radio-2">Care worker</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="Community support and outreach worker" {{ checked('job-group','Community support and outreach worker') }}>
+            <label for="radio-3">Community support and outreach worker</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="Advice guidance and advocacy" {{ checked('job-group','Advice guidance and advocacy') }}>
+            <label for="radio-3">Advice guidance and advocacy</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="Other care providing job role" {{ checked('job-group','Other care providing job role') }}>
+            <label for="radio-3">Other care providing job role</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="Senior management" {{ checked('job-group','Senior management') }}>
+            <label for="radio-3">Senior management</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="Middle management" {{ checked('job-group','Middle management') }}>
+            <label for="radio-3">Middle management</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="First line manager" {{ checked('job-group','First line manager') }}>
+            <label for="radio-3">First line manager</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="Registered manager" {{ checked('job-group','Registered manager') }}>
+            <label for="radio-3">Registered manager</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="Supervisor" {{ checked('job-group','Supervisor') }}>
+            <label for="radio-3">Supervisor</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="Managers and staff in care related but not care providing roles" {{ checked('job-group','Managers and staff in care related but not care providing roles') }}>
+            <label for="radio-3">Managers and staff in care related but not care providing roles</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="Social worker" {{ checked('job-group','Social worker') }}>
+            <label for="radio-3">Social worker</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="Occupational therapist" {{ checked('job-group','Occupational therapist') }}>
+            <label for="radio-3">Occupational therapist</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="Registered nurse" {{ checked('job-group','Registered nurse') }}>
+            <label for="radio-3">Registered nurse</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="Allied health professional" {{ checked('job-group','Allied health professional') }}>
+            <label for="radio-3">Allied health professional</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="Safeguarding and reviewing officer" {{ checked('job-group','Safeguarding and reviewing officer') }}>
+            <label for="radio-3">Safeguarding and reviewing officer</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="Administrative or office staff not providing care" {{ checked('job-group','Administrative or office staff not providing care') }}>
+            <label for="radio-3">Administrative or office staff not providing care</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="I am a British citizen living abroad" {{ checked('job-group','Ancillary not care providing') }}>
+            <label for="radio-3">Ancillary not care providing</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="I am a British citizen living abroad" {{ checked('job-group','Activities worker or coordinator') }}>
+            <label for="radio-3">Activities worker or coordinator</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="Occupational therapist assistant" {{ checked('job-group','Occupational therapist assistant') }}>
+            <label for="radio-3">Occupational therapist assistant</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="job-group" value="Other non care providing job roles" {{ checked('job-group','Other non care providing job roles') }}>
+            <label for="radio-3">Other non care providing job roles</label>
+          </div>
+
+        </fieldset>
+      </div>
+
+
+      <button class="button" type="submit" value="continue">Save and continue</button>
+    </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
